@@ -1,5 +1,5 @@
-# -Django-REST-Framework-with-Docker
-Build a functional API with Docker, Celery, Redis, Flower, Nginx, Nginx Proxy manager, Portainer and more...
+# Django and DRF with Docker (Udemy Course)
+Building a functional API with Docker, Celery, Redis, Flower, Nginx, Nginx Proxy manager, Portainer and more...
 
 # Course content
 
