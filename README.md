@@ -51,3 +51,45 @@ Some of the things I did while setting up the project :
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "authors_api.settings.local")
   ```
 - Created the ```core_apps``` folder and store my django apps there. THe ones created with ```python manage.py startapp```
+
+# Logging In Django
+
+Logging is important for debugging and trouble shoorint our application.
+
+I will use the python ```logging``` module in this course.
+
+```Loggers``` are the fundamental building blocks of this framework. THey are tipically associated with a specific component or module.
+
+The key components of loggers are :
+
+- Log Levels
+- Handlers
+- Filters
+- Formatters
+
+### Setting Up logging
+
+On our settings/local , I have added :
+```py
+LOGGING = {
+    "version" : 1,
+    "disable_existing_loggers": False,
+    "formatters" : {
+        "verbose" : {
+            "format" : "%(levelname)s %(name)-12s %(asctime)s %(module)s"
+            "%(process)d %(thread)d %(message)s"
+        }
+    },
+    "handlers" : {
+        "console" : {
+            "level": "DEBUG",
+            "class": "logging.StreamHandler",
+            "formatter" : "verbose",
+        }
+    },
+    "root": {
+        "level": "INFO",
+        "handlers" : ["console"]
+    },
+}
+```
