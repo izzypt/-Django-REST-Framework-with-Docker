@@ -1,7 +1,7 @@
 # Django and DRF with Docker (Udemy Course)
 Building a functional API with Docker, Celery, Redis, Flower, Nginx, Nginx Proxy manager, Portainer and more...
 
-# Course content
+# Content
 
 On this course we will be building a production ready, detailed Django REST API, running on a web server powered by NGINX, on a custom domain name and served securely over HTTPS with SSL Certificates from Letsencrypt.
 
