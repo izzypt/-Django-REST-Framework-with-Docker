@@ -87,16 +87,16 @@ WSGI_APPLICATION = "authors_api.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": "mydatabase",
-    }
-}
-
 #DATABASES = {
-#    "default": env.db("DATABASE_URL")
+#    "default": {
+#        "ENGINE": "django.db.backends.sqlite3",
+#        "NAME": "mydatabase",
+#    }
 #}
+
+DATABASES = {
+    "default": env.db("DATABASE_URL")
+}
 
 PASSWORD_HASHERS = [
     "django.contrib.auth.hashers.PBKDF2PasswordHasher",
