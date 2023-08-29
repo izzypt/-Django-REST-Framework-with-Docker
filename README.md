@@ -35,3 +35,19 @@ The concepts we shall cover include:
 
 - Makefiles and how they make working with Docker easier.
 
+
+# Project Setup
+
+Some of the things I did while setting up the project :
+
+- Created requirements folder with a file with the required packages for each environment ( dev vs production = base.txt and local.txt vs production.txt )
+- Added a .gitignore
+- Created setup.cfg, configuring ```flake8``` and ```isort```
+- Changed the ```settings.py``` file into a folder with a file for each environment ( dev vs production = base.txt and local.txt vs production.txt )
+- Changed the ```wsgi.py``` file to point to the new settings location
+  ```py
+    file: wsgi.py
+
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "authors_api.settings.local")
+  ```
+- Created the ```core_apps``` folder and store my django apps there. THe ones created with ```python manage.py startapp```
