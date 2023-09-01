@@ -95,5 +95,6 @@ LOGGING = {
 ```
 ### Creating DockerFile and shellscripts
 
+- Dockerfile
 - entrypoint.sh
 - start.sh
