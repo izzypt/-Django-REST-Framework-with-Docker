@@ -93,3 +93,7 @@ LOGGING = {
     },
 }
 ```
+### Creating DockerFile and shellscripts
+
+- entrypoint.sh
+- start.sh
