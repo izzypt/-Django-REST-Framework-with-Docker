@@ -10,4 +10,13 @@ services:
       - static_volume:/app/staticfiles
       - media_volume:/app/mediafiles
     ports:
-      - "8000:8000"
+      - "8000:8000" #maps the port of the host to the port of the container
+    env_file:
+      - ./.envs/.local/.django
+      - ./.envs/.local/.postgres
+    depends_on:
+      - postgres
+      - mailhog
+    command: /start
+    networks: #networks are used to connect services together
+      - authors-api
