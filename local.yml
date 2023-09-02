@@ -20,3 +20,33 @@ services:
     command: /start
     networks: #networks are used to connect services together
       - authors-api
+  
+  postgres:
+    build:
+      context: .
+      dockerfile: ./docker/local/postgres/Dockerfile
+    volumes:
+      - local_postgres_data:/var/lib/postgresql/data
+      - local_postgres_data_backups:/backups
+    env_file:
+      - ./.envs/.local/.postgres
+    networks:
+      - authors-api
+  
+  mailhog:
+    image: mailhog/mailhog:v1.0.0
+    container_name: mailhog
+    ports:
+      - "8025:8025"
+    networks:
+      - authors-api
+
+networks:
+  authors-api:
+    driver: bridge
+
+volumes:
+  static_volume:
+  media_volume:
+  local_postgres_data: {}
+  local_postgres_backups: {}
