@@ -95,6 +95,10 @@ LOGGING = {
 ```
 ### Creating DockerFile and shellscripts
 
-- Dockerfile
-- entrypoint.sh
-- start.sh
+- Django
+  - Dockerfile
+  - entrypoint.sh ```Shell script to run inside docker```
+  - start.sh ```Schell script to run inside docker```
+- PostGres
+  - Dockerfile
+  - 
