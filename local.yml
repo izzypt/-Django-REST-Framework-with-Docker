@@ -49,4 +49,4 @@ volumes:
   static_volume:
   media_volume:
   local_postgres_data: {}
-  local_postgres_backups: {}
+  local_postgres_data_backups: {}
