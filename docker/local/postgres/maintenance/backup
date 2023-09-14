@@ -1,11 +1,16 @@
 #! /usr/bin/env bash
 
+# This option, also known as set -e, tells the shell to exit immediately if any command returns a non-zero exit status
 set -o errexit
+# This option, also known as set -u, causes the shell to treat unset variables as errors. 
+# If a variable is used before it's assigned a value, the script will exit with an error. 
 set -o nounset
+# This option tells the shell to consider a pipeline of commands as failed if any command in the pipeline fails, not just the last one.
 set -o pipefail
 
 working_dir="$(dirname ${0})"
 
+# By using source, any variables, constants, or functions defined in constants.sh and messages.sh become accessible in this script. 
 source "${working_dir}/_sourced/constants.sh"
 source "${working_dir}/_sourced/messages.sh"
 
